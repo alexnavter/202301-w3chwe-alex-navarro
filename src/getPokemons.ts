@@ -1,4 +1,3 @@
-import type { PokemonListStructure } from "./components/types";
 import type { ResultsStructure } from "./data.js";
 
 const getPokemons = async (url: string) => {
