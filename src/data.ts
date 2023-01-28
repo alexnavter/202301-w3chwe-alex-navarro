@@ -1,10 +1,7 @@
-export interface ComponentStructure {
-  domElement: HTMLElement;
-  render: () => void;
-  addListeners?: () => void;
-}
-
 export interface PokemonListStructure {
+  count: number;
+  next: number;
+  previous: undefined;
   results: ResultsStructure;
 }
 
