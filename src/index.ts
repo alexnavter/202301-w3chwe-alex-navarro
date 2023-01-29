@@ -9,7 +9,6 @@ export const pokeApiUrl = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=0";
 const pokemons = await getPokemonApi(pokeApiUrl);
 
 const pokemonsList = await getPokemons(pokemons);
-console.log(pokemonsList);
 
 const rootContainer = document.querySelector(".root");
 
