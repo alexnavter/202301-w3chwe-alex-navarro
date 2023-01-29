@@ -4,11 +4,37 @@ export interface ComponentStructure {
   addListeners?: () => void;
 }
 
-export interface PokemonListStructure {
-  results: ResultsStructure;
+export interface PokemonDetails {
+  id: number;
+  name: string;
+  types: Type;
+  sprites: {
+    other: {
+      dream_world: {
+        front_default: string;
+      };
+    };
+  };
 }
 
-export interface ResultsStructure {
+export interface Type {
+  name: string;
+}
+
+export interface PokemonStructure {
+  name: string;
+  id: number;
+  image: string;
+}
+
+export interface PokemonResult {
+  count: number;
+  next: string;
+  previous: undefined;
+  results: Result[];
+}
+
+export interface Result {
   name: string;
   url: string;
 }

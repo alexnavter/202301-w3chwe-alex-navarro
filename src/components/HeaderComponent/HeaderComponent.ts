@@ -1,5 +1,4 @@
 import Component from "../Component/Component.js";
-import { image } from "../../index.js";
 
 class HeaderComponent extends Component {
   constructor(parentElement: Element) {
@@ -9,8 +8,9 @@ class HeaderComponent extends Component {
   render() {
     super.render();
 
-    this.domElement.innerHTML = `<h1>Poke dex</h1>`;
-    this.domElement.appendChild(image);
+    this.domElement.innerHTML = `
+    <img class="header__logo" src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokemon image">
+    `;
   }
 }
 

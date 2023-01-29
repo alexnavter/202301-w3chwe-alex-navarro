@@ -1,12 +1,14 @@
-import getPokemons from "./getPokemons.js";
+import getPokemons from "./utils/getPokemons.js";
 import PageComponent from "./components/PageComponent.ts/PageComponent.js";
-import Component from "./components/Component/Component.js";
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
+import { getPokemonApi } from "./utils/getPokemonApi.js";
+import type { PokemonStructure } from "./components/types.js";
 
-const url = "https://pokeapi.co/api/v2/pokemon/";
+export const pokeApiUrl = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=0";
 
-export const image: HTMLImageElement = document.createElement("img");
-image.src = "pokemon-logo.png";
+const pokemons = await getPokemonApi(pokeApiUrl);
+
+const pokemonsList = await getPokemons(pokemons);
 
 const rootContainer = document.querySelector(".root");
 
