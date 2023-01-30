@@ -1,9 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
-  background: #70C1DF;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  max-width: 100vw;
+
+
+  font-family: 'helvetica';
+  color: #385EA9;
+  background-color: aqua;
+}
+
+.root {
+  display: flex;
 }
 
 .main-container {
   display: flex;
-  gap: 10px;
   flex-direction: column;
+  gap: 20px;
+}
+
+.pokedex-card {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  padding: 3rem;
+
+  border: 2px solid #70C1DF;
+  border-radius: 30px;
+
+  font-size: 1rem;
+  background-color: antiquewhite;
+}
+
+.card__name {
+  display: flex;
+  flex-direction: row;
+}
+
+.card__image {
+  display: flex;
 }
