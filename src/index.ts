@@ -4,7 +4,8 @@ import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
 import { getPokemonApi } from "./utils/getPokemonApi.js";
 import PokemonCard from "./components/PokemonCard/PokemonCard.js";
 
-export const pokeApiUrl = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=0";
+export const pokeApiUrl =
+  "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20";
 
 const pokemons = await getPokemonApi(pokeApiUrl);
 
